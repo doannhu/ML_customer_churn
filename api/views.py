@@ -42,4 +42,5 @@ def addCustomer(request):
 def getScores(request):
     queryset = CustomerChurn.objects.all()
     res_accracy, res_f1 = ML_prediction(queryset=queryset)
-    return Response(res_f1)
+    all_score = {"f1_score": res_f1, "accuracy_score": res_accracy}
+    return Response(all_score)
