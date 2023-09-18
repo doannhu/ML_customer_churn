@@ -1,4 +1,3 @@
-from .models import CustomerChurn
 import re
 
 #remove all non digit and dash in mobile phone
